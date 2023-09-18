@@ -1,10 +1,9 @@
-import Pattern from '@/components/Pattern'
 import Navbar from '@/components/Navbar'
 import Image from 'next/image'
 
 export default function BuyProperty() {
   return (
-    <Pattern>
+    <div>
       <Navbar />
       <h1 className='m-16 font-bold text-3xl'>Comprar token de acesso a propriedade</h1>
       <div className='flex justify-between mt-16 mx-24'>
@@ -42,7 +41,7 @@ export default function BuyProperty() {
 
       </div>
       
-    </Pattern>
+    </div>
 
   )
 }

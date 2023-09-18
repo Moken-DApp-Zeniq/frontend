@@ -1,7 +1,13 @@
+'use client'
 import Image from 'next/image'
 import Link from 'next/link';
+import { useEffect } from 'react';
+import { useMetaMask } from '../contexts/WalletContext';
 
 export default function Navbar() {
+  const { account, connectMetaMask } = useMetaMask();
+
+  console.log({account})
   return (
       <div className='flex justify-center'>
           <div className='m-6 bg-white w-[97%] h-16 rounded-md shadow-md flex justify-between p-4'>
@@ -20,10 +26,17 @@ export default function Navbar() {
               <button
                 type="button"
                 className="hover:bg-hover_grey px-4 py-2 rounded-full border-[1px] border-grey transition duration-300 ease-in-out text-black"
-                // onClick={connectWallet}
                 >
-                {/* {isConnected ? 'Connected wallet: ' + accountAddress.substring(0, 6) + '...' + accountAddress.substring(38, 42) : 'Connect wallet'} */}
+                  {account}
       </button>
+      {account ? (
+        <>
+          <p>Connected Account: {account}</p>
+          <button>Disconnect MetaMask</button>
+        </>
+      ) : (
+        <button onClick={connectMetaMask}>aaaa MetaMask</button>
+      )}
           </div>
       </div>
 

@@ -1,10 +1,9 @@
-import Pattern from '@/components/Pattern'
 import Navbar from '@/components/Navbar'
 import Image from 'next/image'
 
 export default function Home() {
   return (
-    <Pattern>
+    <div>
       <Navbar />
       <div className='flex justify-around mx-36 my-16'>
         <Image
@@ -43,7 +42,7 @@ export default function Home() {
       </div>
 
       
-    </Pattern>
+    </div>
 
   )
 }
