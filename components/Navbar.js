@@ -9,7 +9,7 @@ export default function Navbar() {
               alt='Moken Logo'
               width={100}
               height={100} />
-              <button>
+              <button className='hover:scale-90 duration-300'>
                 <Image
                 src='/header.svg'
                 alt='Header'
