@@ -12,7 +12,7 @@ function SearchField({ onSearch }) {
   };
 
   return (
-    <div className="relative">
+    <div className="relative flex justify-center items-center">
       <input
         type="text"
         placeholder="Search..."

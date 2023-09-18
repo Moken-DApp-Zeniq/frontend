@@ -8,7 +8,7 @@ export default function Rentals() {
     <Pattern>
       <Navbar />
       <div className="px-6">
-        <span className="flex justify-between">
+        <span className="flex justify-between items-center">
           <h1 className="font-semibold text-2xl pb-5">All rentals</h1>
           <SearchField/>
         </span>
