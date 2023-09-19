@@ -4,8 +4,6 @@ import { Montserrat } from 'next/font/google'
 import { MetaMaskProvider } from '../contexts/WalletContext';
 
 import "./globals.css";
-import { Inter } from "next/font/google";
-import Head from "next/head";
 import { SelectedRentalProvider } from "../contexts/rental";
 
 export const metadata = {
