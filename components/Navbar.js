@@ -20,8 +20,8 @@ export default function Navbar() {
                 height={100} />
                 </Link>
                 <Link 
-                href="/outra-pagina"
-                className='font-bold hover:scale-95 duration-300'>All properties</Link>
+                href="/rentals"
+                className='font-bold hover:scale-95 duration-300'>All rentals</Link>
               </div>
               <button
                 type="button"
