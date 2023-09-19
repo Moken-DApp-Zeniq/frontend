@@ -1,7 +1,12 @@
+'use client'
 import Navbar from '@/components/Navbar'
 import Image from 'next/image'
+import { useRouter } from "next/navigation";
 
 export default function Home() {
+  const router = useRouter();
+
+
   return (
     <div>
       <Navbar />
@@ -37,7 +42,7 @@ export default function Home() {
           <div className='w-1/2 flex flex-col justify-center items-center'>
             <h1 className='font-bold text-2xl my-2'>Encontre seu imóvel</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, </p>
-            <button className='bg-black text-white font-bold text-xl my-8 p-6 rounded-2xl hover:scale-95 duration-300'>Ver opções diponiveis</button>
+            <button onClick={() => router.push('/rentals')} className='bg-black text-white font-bold text-xl my-8 p-6 rounded-2xl hover:scale-95 duration-300'>Ver opções diponiveis</button>
           </div>
       </div>
 

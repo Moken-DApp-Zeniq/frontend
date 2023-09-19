@@ -15,7 +15,7 @@ const montserrat = Montserrat({subsets: ['latin']})
 
 export default function RootLayout({ children }) {
   return (
-    <html className='montserrat.className'>
+    <html className={montserrat.className}>
       <SelectedRentalProvider>
       <MetaMaskProvider>
       <body className='bg-lightGray w-full'>

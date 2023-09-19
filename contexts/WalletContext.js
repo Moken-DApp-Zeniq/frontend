@@ -12,6 +12,24 @@ export function useMetaMask() {
 export function MetaMaskProvider({ children }) {
   const [account, setAccount] = useState(null);
 
+
+const checkWalletConnection = async () => {
+  try {
+    const accounts = await window.ethereum.request({ method: 'eth_accounts' });
+
+    if (accounts.length > 0) {
+      setAccount(accounts[0]);
+      console.log('MetaMask connected:', accounts[0]);
+    } else {
+      console.warn('MetaMask is not connected.');
+      setAccount(null);
+    }
+  } catch (error) {
+    console.error('Error checking MetaMask connection:', error);
+    setAccount(null);
+  }
+};
+
   const connectMetaMask = async () => {
     console.log('omg')
       try {
@@ -32,6 +50,12 @@ export function MetaMaskProvider({ children }) {
         setAccount(null);
       }
     }
+
+
+  useEffect(() => {
+    // Check the wallet connection when the component mounts
+    checkWalletConnection();
+  }, []); 
   
 
   const value = {

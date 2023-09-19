@@ -7,7 +7,7 @@ const CardList = ({filteredRentals}) => {
   console.log({filteredRentals})
 
   return (
-    <div className='flex flex-wrap gap-8 my-3'>
+    <div className='flex flex-wrap gap-8 my-3 mx-4'>
       {filteredRentals.map((rental) => (
         <Card
           key={rental.id} // Make sure to set a unique key for each Card component

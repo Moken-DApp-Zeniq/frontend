@@ -1,6 +1,5 @@
 'use client'
 
-import Pattern from "@/components/Pattern";
 import Navbar from "@/components/Navbar";
 import SearchField from "@/components/SearchField";
 import CardList from "@/components/CardList";
@@ -120,15 +119,15 @@ export default function Rentals() {
   };
 
   return (
-    <Pattern>
+    <div>
       <Navbar />
       <div className="px-6">
         <span className="flex justify-between items-center">
-          <h1 className="font-semibold text-2xl pb-5">All rentals</h1>
+          <h1 className="m-4 font-bold text-3xl pb-8">All rentals</h1>
           <SearchField onSearch={onSearch} onBlur={resetFilter} />
         </span>
         <CardList filteredRentals={searchTerm ? filteredRentals : rentals} />
       </div>
-    </Pattern>
+    </div>
   );
 }
