@@ -11,11 +11,10 @@ export default function BuyProperty() {
   const [address, setAddress] = useState("");
   const [feedback, setFeedback] = useState("");
   const [contract, setContract] = useState(null);
-  const [result, setResult] = useState(false);
 
   useEffect(() => {
     const initialize = async () => {
-      const contractAddress = "0x0F7703919BD8c85F090C38B53578bf8873cf4401";
+      const contractAddress = "0x02ba6264C19AcF92e24cAC47678690c571Ab6f2b";
       const contractABI = Property.abi;
       const provider = new ethers.BrowserProvider(window.ethereum);
       const signer = await provider.getSigner();
@@ -30,27 +29,10 @@ export default function BuyProperty() {
   }, []);
 
   const handleSimulate = async () => {
-    // Convert the date to an integer representing the day of the year (0-364).
-    const selectedDate = new Date(date);
-    const dayOfYear = Math.floor(
-      (selectedDate - new Date(selectedDate.getFullYear(), 0, 0)) / 86400000
-    );
 
-    // Call your smart contract function with date (dayOfYear) and address.
-    // Replace the following line with your contract interaction code.
-    await contract.checkIn(dayOfYear, address)
-    contract.on("CheckIn", (day, tenant) => {
-        setResult(true)
-        console.log(`CheckIn event received - Day: ${day.toString()}, Tenant: ${tenant}`);
-      });
-      contract.on("CheckInFailed", (day, tenant) => {
-        setResult(false)
-      });
-    
+    const result = await contract.checkIn(date, address)
+    console.log(result)
 
-    // Simulate the result (replace this with actual contract interaction logic).
-
-    // Display feedback based on the result.
     setFeedback(result ? "Door unlocked!" : "Door did not unlock!");
   };
 
@@ -63,7 +45,7 @@ export default function BuyProperty() {
           <label>
             Day:
             <input
-              type="date"
+              type="text"
               className="border rounded-md ml-2 mb-2 p-1"
               value={date}
               onChange={(e) => setDate(e.target.value)}

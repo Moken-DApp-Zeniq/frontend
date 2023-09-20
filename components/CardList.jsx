@@ -10,13 +10,14 @@ const CardList = ({filteredRentals}) => {
     <div className='flex flex-wrap gap-8 my-3 mx-8 '>
       {filteredRentals.map((rental) => (
         <Card
-          key={rental.id} // Make sure to set a unique key for each Card component
-          type={rental.type}
-          price={rental.price}
-          address={rental.address}
-          bedrooms={rental.bedrooms}
-          size={rental.size}
-          spots={rental.spots}
+          key={rental?.id} // Make sure to set a unique key for each Card component
+          type={rental?.type}
+          price={rental?.price}
+          address={rental?.address}
+          bedrooms={rental?.bedrooms}
+          size={rental?.size}
+          spots={rental?.spots}
+          image={rental?.image}
         />
       ))}
     </div>

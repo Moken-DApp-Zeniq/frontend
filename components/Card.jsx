@@ -2,7 +2,7 @@ import Image from "next/image";
 import { useSelectedRental } from "../contexts/rental";
 import { useRouter } from "next/navigation";
 
-const Card = ({ price, address, size, bedrooms, spots, type }) => {
+const Card = ({ price, address, size, bedrooms, spots, type, image }) => {
   const { setSelectedRental } = useSelectedRental();
   const router = useRouter();
 
@@ -24,12 +24,12 @@ const Card = ({ price, address, size, bedrooms, spots, type }) => {
       className="border rounded-md py-6 w-1/5 bg-white border-black hover:cursor-pointer hover:scale-[98%] duration-300"
       onClick={handleCardClick}
     >
-      <Image
-        src="/house.jfif"
+      <img
+        src={image}
         className="w-full"
         width={200}
         height={200}
-      ></Image>
+      ></img>
       <div className="px-4 pt-4 gap-2 flex flex-col">
         <p className="text-gray-500 text-xs">{type}</p>
         <p className="font-semibold">Starting at USD {price}/day</p>
