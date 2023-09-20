@@ -1,9 +1,9 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Moken Frontend Repository
 
 ## Getting Started
 
-First, run the development server:
-
+- Clone this repository: git clone `https://github.com/Moken-DApp-Zeniq/frontend`
+- First, run the development server:
 ```bash
 npm run dev
 # or
@@ -11,24 +11,14 @@ yarn dev
 # or
 pnpm dev
 ```
+- Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Frontend Architecture
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+The Lilium frontend is built using modern web technologies to deliver a seamless and engaging user experience. Here's an overview of the frontend architecture:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- Framework: We utilize Next.js, a powerful React framework, to build the frontend application. Next.js provides server-side rendering, efficient routing, and other performance optimizations out of the box, enhancing the overall user experience.
 
-## Learn More
+- Styling: For our UI design, we leverage Tailwind CSS. Tailwind CSS is a highly customizable CSS framework that enables rapid and consistent styling
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- Blockchain Interaction: Lilium utilizes Ether.js, a JavaScript library for interacting with the Ethereum blockchain. With Ether.js, we can seamlessly connect the frontend to the blockchain network, enabling functionalities such as buying and retiring carbon credit tokens securely.
