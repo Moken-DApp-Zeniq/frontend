@@ -21,7 +21,7 @@ const Card = ({ price, address, size, bedrooms, spots, type }) => {
   };
   return (
     <div
-      className="border rounded-md py-6 w-3/12 bg-white border-black hover:cursor-pointer hover:scale-[98%] duration-300"
+      className="border rounded-md py-6 w-1/5 bg-white border-black hover:cursor-pointer hover:scale-[98%] duration-300"
       onClick={handleCardClick}
     >
       <Image

@@ -21,22 +21,21 @@ export default function BuyProperty() {
   return (
     <div>
       <Navbar />
-      <h1 className='m-16 font-bold text-3xl'>Comprar token de acesso a propriedade</h1>
+      <h1 className='m-16 font-bold text-3xl'>Buy property access token</h1>
       <div className='flex justify-between mt-16 mx-24'>
         <div>
             <div>
-                <p className='font-semibold text-xl'>Data</p>
+                <p className='font-semibold text-xl'>Date</p>
                 <input type='date' className='mt-6 py-3 w-96 px-2 rounded-lg border border-black hover:cursor-pointer'/>
             </div>
             <div className='mt-8'>
-                <p className='font-semibold text-xl'>CPF</p>
+                <p className='font-semibold text-xl'>ID</p>
                 <input type='text' className='mt-6 py-3 w-96 px-2 rounded-lg border border-black' />
             </div>
             <div className='mt-8'>
                 <h1 className='text-2xl font-bold'>Price: USD {selectedRental?.price}</h1>
-                <p>Valor referente ao montate de final dos dias selecionados</p>
             </div>
-            <button className='w-96 py-4 rounded-md font-bold mt-12 bg-black text-white hover:scale-95 duration-300'>Comprar token</button>
+            <button className='w-96 py-4 rounded-md font-bold mt-12 bg-black text-white hover:scale-95 duration-300'>Buy token</button>
         </div>
         <div>
             <Image
