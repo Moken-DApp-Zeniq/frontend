@@ -3,14 +3,8 @@
 ## Getting Started
 
 - Clone this repository: git clone `https://github.com/Moken-DApp-Zeniq/frontend`
-- First, run the development server:
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+- Run in the terminal `npm i`
+- Run the development server `npm run dev`
 - Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 ## Frontend Architecture
