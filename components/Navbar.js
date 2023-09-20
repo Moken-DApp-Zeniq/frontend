@@ -21,6 +21,9 @@ export default function Navbar() {
                 <Link 
                 href="/rentals"
                 className='font-bold hover:scale-95 duration-300'>All rentals</Link>
+                <Link 
+                href="/iot"
+                className='font-bold hover:scale-95 duration-300'>Simulation</Link>
               </div>
               {account ? <button
                 type="button"

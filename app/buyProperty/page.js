@@ -1,4 +1,5 @@
-"use client";
+'use client'
+
 import React, { useEffect, useState } from "react";
 import Navbar from "@/components/Navbar";
 import Image from "next/image";
@@ -12,6 +13,7 @@ export default function BuyProperty() {
   const [contract, setContract] = useState(null);
   const router = useRouter();
   const [date, setDate] = useState("");
+  const [feedback, setFeedback] = useState(""); // State for feedback message
 
   useEffect(() => {
     const initialize = async () => {
@@ -34,8 +36,20 @@ export default function BuyProperty() {
   }, [selectedRental]);
 
   const buy = async () => {
-    const result = await contract.booking(date);
-    console.log({ result });
+    try {
+      const result = await contract.booking(date);
+      if (result) {
+        // Booking was successful
+        setFeedback("Your booking was successful");
+      } else {
+        // Booking failed (date already booked)
+        setFeedback("This date is already booked");
+      }
+    } catch (error) {
+      console.error("An error occurred:", error);
+      // Handle other errors if needed
+      setFeedback("This date is already booked");
+    }
   };
 
   return (
@@ -44,6 +58,12 @@ export default function BuyProperty() {
       <h1 className="m-16 font-bold text-3xl">
         Purchase property access token
       </h1>
+      {/* Display feedback message if available */}
+      {feedback && (
+        <div className={feedback === "Your booking was successful" ? "text-green-500 ml-16" : "text-red-500 ml-16"}>
+          {feedback}
+        </div>
+      )}
       <div className="flex justify-between mt-16 mx-24">
         <div>
           <div>
