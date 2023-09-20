@@ -58,7 +58,7 @@ export default function Rentals() {
             bedrooms: 4,
             size: 2500,
             spots: 2,
-            image: 'https://www.ahstatic.com/photos/1988_rokga_00_p_1024x768.jpg'
+            image: 'https://a0.muscache.com/im/pictures/c2e375fb-8974-4d6b-9214-317198344b3c.jpg?im_w=720'
           },
           {
             id: 2,
@@ -68,7 +68,7 @@ export default function Rentals() {
             bedrooms: 3,
             size: 1800,
             spots: 4,
-            image: 'https://www.ahstatic.com/photos/1988_rokga_00_p_1024x768.jpg'
+            image: 'https://a0.muscache.com/im/pictures/b6593d81-46cf-4463-9ee0-bd805aec10a2.jpg?im_w=720'
           },
           {
             id: 3,
@@ -78,7 +78,7 @@ export default function Rentals() {
             bedrooms: 2,
             size: 1200,
             spots: 1,
-            image: 'https://www.ahstatic.com/photos/1988_rokga_00_p_1024x768.jpg'
+            image: 'https://a0.muscache.com/im/pictures/miso/Hosting-3298227/original/72421c00-2ad8-450e-923a-5350b3ff069f.jpeg?im_w=720'
           },
           {
             id: 4,
@@ -88,7 +88,7 @@ export default function Rentals() {
             bedrooms: 5,
             size: 4000,
             spots: 6,
-            image: 'https://www.ahstatic.com/photos/1988_rokga_00_p_1024x768.jpg'
+            image: 'https://a0.muscache.com/im/pictures/281b9c7a-e4e5-49d4-84bb-1ea87b464e9d.jpg?im_w=720'
           },
           {
             id: 5,
@@ -98,7 +98,7 @@ export default function Rentals() {
             bedrooms: 3,
             size: 2200,
             spots: 3,
-            image: 'https://www.ahstatic.com/photos/1988_rokga_00_p_1024x768.jpg'
+            image: 'https://a0.muscache.com/im/pictures/3fcdccc4-eb86-4b8f-971b-ba8cd7c3fe47.jpg?im_w=720'
           },
           {
             id: 6,
@@ -108,7 +108,7 @@ export default function Rentals() {
             bedrooms: 2,
             size: 1600,
             spots: 2,
-            image: 'https://www.ahstatic.com/photos/1988_rokga_00_p_1024x768.jpg'
+            image: 'https://a0.muscache.com/im/pictures/578a3500-5461-4beb-91bb-827da53afa78.jpg?im_w=720'
           },
         ])
     
