@@ -123,7 +123,7 @@ export default function Rentals() {
       <Navbar />
       <div className="px-6">
         <span className="flex justify-between items-center">
-          <h1 className="m-4 font-bold text-3xl pb-8">All rentals</h1>
+          <h1 className="mx-8 my-4 font-bold text-3xl pb-8">All rentals</h1>
           <SearchField onSearch={onSearch} onBlur={resetFilter} />
         </span>
         <CardList filteredRentals={searchTerm ? filteredRentals : rentals} />
